@@ -17,6 +17,7 @@ export default async function postPhoto(uid, uri, base64, animalCounts, setAnima
   };
 
   const getImageTags = async (base64) => {
+    const apiURL = "removed api"
     let body = JSON.stringify({
       requests: [
         {
@@ -27,7 +28,7 @@ export default async function postPhoto(uid, uri, base64, animalCounts, setAnima
         },
       ],
     });
-    let response = await fetch("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDNpGP52g4D0eVBHXmohzglMLMk1qUvhVc", {
+    let response = await fetch(apiURL, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
